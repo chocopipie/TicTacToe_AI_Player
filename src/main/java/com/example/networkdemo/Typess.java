@@ -1,4 +1,4 @@
-package com.networkdemo;
+package com.example.networkdemo;
 
 public interface Typess {
 

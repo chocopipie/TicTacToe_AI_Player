@@ -3,6 +3,6 @@ module com.networkdemo.ai_player {
     requires javafx.fxml;
 
 
-    opens com.networkdemo to javafx.fxml;
-    exports com.networkdemo;
+    opens com.example.networkdemo to javafx.fxml;
+    exports com.example.networkdemo;
 }

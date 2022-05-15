@@ -1,11 +1,6 @@
-package com.networkdemo;
+package com.example.networkdemo;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-
-public class AIController {
+public class AIController extends Board{
 
     //makeMove(x,y)
     public Minimax.MinimaxMove makeMove(char grid[][]) {
@@ -14,8 +9,12 @@ public class AIController {
             }
 
     //rematchRequest
-    
+    public requestRematch() {
+
+    }
 
     //rematchAccept
+    public requestRematch() {
 
+    }
 }
