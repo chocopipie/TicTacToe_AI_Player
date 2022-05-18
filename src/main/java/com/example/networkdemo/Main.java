@@ -4,6 +4,9 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,12 +24,17 @@ public class Main extends Application {
     static Hashtable<String, Board> boardList = new Hashtable<>();
 
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("welcome.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) {
+        BorderPane mainPane = new BorderPane();
+        // Text area to display contents
+        TextArea ta = new TextArea();
+        mainPane.setCenter(new ScrollPane(ta));
+
+        // Create a scene and place it in the stage
+        Scene scene = new Scene(mainPane, 450, 200);
+        primaryStage.setTitle("AI Controller"); // Set the stage title
+        primaryStage.setScene(scene); // Place the scene in the stage
+        primaryStage.show(); // Display the stage
 
         try {
             // Create a socket to connect to the server

@@ -7,14 +7,4 @@ public class AIController extends Board{
                 Minimax.MinimaxMove bestMove = Minimax.findBestMove(grid);
                 return bestMove;
             }
-
-    //rematchRequest
-    public requestRematch() {
-
-    }
-
-    //rematchAccept
-    public requestRematch() {
-
-    }
 }
