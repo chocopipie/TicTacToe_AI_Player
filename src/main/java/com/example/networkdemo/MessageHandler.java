@@ -6,6 +6,7 @@ import java.io.ObjectOutputStream;
 
 import static com.example.networkdemo.HumanTypes.*;
 import static com.example.networkdemo.Main.boardList;
+import static com.example.networkdemo.AIController.*;
 
 class MessageHandler extends GameController {
 
@@ -71,6 +72,13 @@ class MessageHandler extends GameController {
                 boardList.replace(current_room_id,currentBoard); // update the board list with new token on current board
                 // send moveMade (contains Move -> x,y,token)
                 messageToSend = new Message(currentMove, MOVE_MADE);  // create message to send
+                sendMessage();  // send moveMade or moveRejected message
+
+                //GET AI MOVE (INFINITE LOOP + DOESNT CHANGE TO 'O')
+                currentMove.setToken('O');
+                Minimax.MinimaxMove aiMove = makeMove(currentBoard.getGrid());
+                Move aiBestMove = new Move(aiMove.row, aiMove.col, token, current_room_id);
+                messageToSend = new Message(aiBestMove, MAKE_MOVE);  // create message to send
                 sendMessage();  // send moveMade or moveRejected message
 
                 // check if there's a winner or a tie

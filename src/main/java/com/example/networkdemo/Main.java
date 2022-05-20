@@ -85,7 +85,6 @@ public class Main extends Application {
                             //handler.gameCreatedHandler(messageReceived);
                             break;
                         case MAKE_MOVE:
-                            System.out.println("LOL");
                             handler.makeMoveHandler(messageReceived);
                             break;
                         case QUIT: handler.quitHandler(messageReceived);
