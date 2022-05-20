@@ -65,6 +65,8 @@ public class Main extends Application {
                     // Downcast humanTypes from Typess
                     HumanTypes messageType = (HumanTypes) messageReceived.getType();
 
+                    System.out.println(messageType);
+
                     // display the text area
                     Platform.runLater(new Runnable() {
                         @Override
@@ -76,13 +78,14 @@ public class Main extends Application {
 
                     switch (messageType) {
 
-                        case MULTIGAME_CREATED:
+                        case SOLOGAME_CREATED:
                             handler.gameCreatedHandler(messageReceived);
                             break;
                         case JOIN_SUCCESS:
                             //handler.gameCreatedHandler(messageReceived);
                             break;
                         case MAKE_MOVE:
+                            System.out.println("LOL");
                             handler.makeMoveHandler(messageReceived);
                             break;
                         case QUIT: handler.quitHandler(messageReceived);
