@@ -7,8 +7,8 @@ public class Minimax extends AIController {
         int col;
     };
 
-    static char player1 = 'X';
-    static char opponent1 = 'O';
+    static char player1 = 'O';
+    static char opponent1 = 'X';
 
     //determine if space is set already
     public static boolean isFull(char grid[][]) {
