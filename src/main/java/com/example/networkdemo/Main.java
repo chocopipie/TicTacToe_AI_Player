@@ -91,8 +91,8 @@ public class Main extends Application {
                             break;
                         case PLAY_AGAIN: handler.rematchAcceptHandler(messageReceived);
                             break;
-                        case REMATCH_REJECT: handler.rematchRejectHandler(messageReceived);
-                            break;
+//                        case REMATCH_REJECT: handler.rematchRejectHandler(messageReceived);
+//                            break;
                     }
 
                 } catch (IOException ex) {
