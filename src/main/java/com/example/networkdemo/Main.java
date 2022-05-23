@@ -89,7 +89,7 @@ public class Main extends Application {
                             break;
                         case QUIT: handler.quitHandler(messageReceived);
                             break;
-                        case REMATCH_ACCEPT: handler.rematchAcceptHandler(messageReceived);
+                        case PLAY_AGAIN: handler.rematchAcceptHandler(messageReceived);
                             break;
                         case REMATCH_REJECT: handler.rematchRejectHandler(messageReceived);
                             break;

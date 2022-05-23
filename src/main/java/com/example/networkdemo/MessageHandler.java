@@ -149,7 +149,7 @@ class MessageHandler extends GameController {
         //delete board form list
         boardList.remove(current_room_id);
         boardList.forEach((key, value) -> System.out.println(key));
-        messageToSend = new Message(current_room_id, REMATCH_REJECTED);
+        messageToSend = new Message(current_room_id, PLAYAGAIN_ACCEPTED);
         sendMessage();
     }
 }
