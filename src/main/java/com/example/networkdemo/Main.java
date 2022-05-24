@@ -87,8 +87,8 @@ public class Main extends Application {
                         case MAKE_MOVE:
                             handler.makeMoveHandler(messageReceived);
                             break;
-                        case QUIT: handler.quitHandler(messageReceived);
-                            break;
+//                        case QUIT: handler.quitHandler(messageReceived);
+//                            break;
                         case PLAY_AGAIN: handler.rematchAcceptHandler(messageReceived);
                             break;
 //                        case REMATCH_REJECT: handler.rematchRejectHandler(messageReceived);
